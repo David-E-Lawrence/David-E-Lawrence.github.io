@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rocket Flight Simulator | David Lawrence</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        background-color: #F7F7F8;
+        color: #1F2933;
+    }
+
+    /* TOP NAV (subtle, top-left like a report site) */
+    .top-nav {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+    }
+
+    .top-nav a {
+        color: #2F6FED;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95em;
+    }
+
+    .top-nav a:hover {
+        text-decoration: underline;
+    }
+
+    header {
+        background: #FFFFFF;
+        border-bottom: 1px solid #E4E7EB;
+        padding: 70px 20px 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.6em;
+        letter-spacing: -0.5px;
+        color: #1F2933;
+    }
+
+    header p {
+        color: #52606D;
+        margin-top: 10px;
+        font-size: 1.05em;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        max-width: 850px;
+        margin: auto;
+        padding: 50px 20px;
+    }
+
+    /* REPORT STYLE BLOCK */
+    .block {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #1F2933;
+        border-bottom: 1px solid #E4E7EB;
+        padding-bottom: 6px;
+    }
+
+    p {
+        color: #52606D;
+        line-height: 1.75;
+        font-size: 1em;
+    }
+
+    ul {
+        color: #52606D;
+        line-height: 1.75;
+    }
+
+    /* FIGURE STYLE (makes images feel like report figures) */
+    figure {
+        margin: 25px 0;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #E4E7EB;
+        background: white;
+    }
+
+    figcaption {
+        font-size: 0.85em;
+        color: #707070;
+        margin-top: 8px;
+    }
+
+    /* TAGS (subtle metadata, not UI decoration) */
+    .tags {
+        margin-top: 10px;
+    }
+
+    .tag {
+        display: inline-block;
+        border: 1px solid #E4E7EB;
+        background: #F7F7F8;
+        color: #52606D;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.8em;
+        margin-right: 5px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="top-nav">
+    <a href="index.html">← Projects</a>
+</div>
+
+<header>
+    <h1>Rocket Flight Simulator</h1>
+    <p>
+        A 2D physics-based rocket simulation using numerical integration to model thrust, drag, gravity,
+        and atmospheric variation with altitude.
+    </p>
+</header>
+
+<div class="section">
+
+    <div class="block">
+        <h2>Abstract</h2>
+        <p>
+            This project simulates the flight dynamics of a rocket in two dimensions using Euler integration.
+            The goal is to model how propulsion, aerodynamic drag, and atmospheric conditions influence trajectory
+            and performance over time.
+        </p>
+    </div>
+
+    <div class="block">
+        <h2>Model Overview</h2>
+        <p>
+            The system evolves using Newton’s second law. At each timestep, forces from thrust, gravity, and drag
+            are computed and integrated to update velocity and position.
+        </p>
+    </div>
+
+    <div class="block">
+        <h2>Aerodynamic Effects</h2>
+        <p>
+            Drag is modeled as a velocity-dependent force with increased sensitivity in the transonic regime.
+            Atmospheric density decreases with altitude, reducing drag at higher elevations.
+        </p>
+    </div>
+
+    <div class="block">
+        <h2>Results</h2>
+
+        <figure>
+            <img src="images/rocket/trajectory.svg" alt="Trajectory plot">
+            <figcaption>Figure 1: Simulated rocket trajectory under baseline parameters.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/rocket/velocity.svg" alt="Velocity plot">
+            <figcaption>Figure 2: Velocity profile showing thrust phase and post-burn deceleration.</figcaption>
+        </figure>
+    </div>
+
+    <div class="block">
+        <h2>Key Findings</h2>
+        <ul>
+            <li>Trajectory is highly sensitive to drag coefficient assumptions</li>
+            <li>Transonic drag rise significantly reduces peak velocity</li>
+            <li>Euler integration introduces timestep-dependent numerical error</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>Limitations</h2>
+        <ul>
+            <li>Two-dimensional motion only (no attitude dynamics)</li>
+            <li>Simplified atmospheric model</li>
+            <li>Fixed timestep Euler integration (no adaptive solver)</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
