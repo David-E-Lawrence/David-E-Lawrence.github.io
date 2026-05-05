@@ -1,22 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>David Lawrence | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>David Lawrence | Mechanical Engineering Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #F7F7F8;
+        color: #1F2933;
+    }
+
+    header {
+        padding: 90px 20px 50px 20px;
+        text-align: center;
+        background: #FFFFFF;
+        border-bottom: 1px solid #E4E7EB;
+    }
+
+    header h1 {
+        font-size: 3em;
+        margin: 0;
+        color: #1F2933;
+        letter-spacing: -0.5px;
+    }
+
+    header p {
+        color: #52606D;
+        margin-top: 10px;
+        font-size: 1.1em;
+    }
+
+    .links a {
+        color: #2F6FED;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    .section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px 20px;
+    }
+
+    .project {
+        background: #FFFFFF;
+        border: 1px solid #E4E7EB;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .project h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: #1F2933;
+    }
+
+    .project p {
+        color: #52606D;
+        line-height: 1.7;
+        max-width: 800px;
+    }
+
+    .project img {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        border: 1px solid #E4E7EB;
+    }
+
+    .tags {
+        margin-top: 12px;
+    }
+
+    .tag {
+        display: inline-block;
+        border: 1px solid #E4E7EB;
+        background: #F7F7F8;
+        color: #52606D;
+        padding: 4px 10px;
+        margin-right: 5px;
+        border-radius: 999px;
+        font-size: 0.8em;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 16px;
+        background: #2F6FED;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        background: #1f56c9;
+    }
+
+    footer {
+        text-align: center;
+        padding: 50px;
+        color: #52606D;
+    }
+</style>
 </head>
+
 <body>
+
+<header>
     <h1>David Lawrence</h1>
-    <p>Mechanical Engineering Student | Aerospace Focus</p>
+    <p>Mechanical Engineering Student — Aerospace Concentration</p>
 
-    <h2>Projects</h2>
+    <div class="links">
+        <a href="https://github.com/David-E-Lawrence" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-elliot-lawrence/" target="_blank">LinkedIn</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
+    </div>
+</header>
 
-    <h3>Rocket Simulation (Python)</h3>
-    <p>Modeled rigid-body rocket dynamics using RK4 integration.</p>
+<div class="section">
 
-    <h3>CAD Projects</h3>
-    <p>(Coming soon)</p>
+    <!-- PROJECT -->
+    <div class="project">
+        <h2>Rocket Flight Simulator</h2>
 
-    <p>
-        <a href="https://github.com/David-E-Lawrence">GitHub</a>
-    </p>
+        <p>
+            2D physics-based rocket flight simulation using Euler integration, modeling thrust, drag (including transonic drag effects),
+            variable gravity, and altitude-dependent atmospheric density.
+        </p>
+
+        <p>
+            Generates post-flight analysis including trajectory, velocity profiles, drag forces, and fuel consumption over time.
+        </p>
+
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Simulation</span>
+            <span class="tag">Aerodynamics</span>
+        </div>
+
+        <img src="images/rocket/trajectory.svg" alt="Rocket trajectory plot">
+
+        <a class="button" href="rocket-simulator.html">
+            View Project
+        </a>
+        <a class="button" href="https://github.com/David-E-Lawrence/Rocket-Simulation" target="_blank">
+            View Code
+        </a>
+    </div>
+
+    <!-- CAD -->
+    <div class="project">
+        <h2>Mechanical CAD Design (SolidWorks)</h2>
+
+        <p>
+            Designed mechanical components and assemblies in SolidWorks with focus on manufacturable geometry,
+            tolerances, and engineering drawing standards.
+        </p>
+
+        <div class="tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">CAD</span>
+            <span class="tag">Manufacturing</span>
+        </div>
+
+        <img src="images/cad_model.png" alt="CAD model">
+    </div>
+
+    <!-- MATLAB -->
+    <div class="project">
+        <h2>MATLAB Engineering Analysis</h2>
+
+        <p>
+            Applied numerical methods and data visualization in MATLAB to analyze and model engineering systems.
+        </p>
+
+        <div class="tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Numerical Methods</span>
+        </div>
+
+        <img src="images/matlab_plot.png" alt="MATLAB plot">
+    </div>
+
+</div>
+
+<footer>
+    © 2026 David Lawrence
+</footer>
+
 </body>
 </html>
